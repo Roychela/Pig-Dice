@@ -8,3 +8,22 @@
 body {
   background: lightgreen;
 }
+.alignment {
+  text-align: center;
+  border: 1px solid blue;
+}
+input {
+  text-align: center;
+  display: block;
+  color: white;
+  font-family: 'Monoton', sans-serif;
+  border-radius: 5px;
+  background: black;
+}
+h1 {
+  color: darkgreen;
+  font-family: 'Monoton', sans-serif;
+}
+.labelstyle {
+  font-family: 'Audiowide', sans-serif;
+}
