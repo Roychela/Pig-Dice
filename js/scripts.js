@@ -25,6 +25,13 @@ Player.prototype.holdPlay = function() {
   this.turnScore = 0;
   return this.totalScore;
 }
+Player.prototype.gameWinner = function() {
+  if (playerOne.totalScore >= 100) {
+       alert("Player one has won the game!!!");
+     }else if (playerTwo.totalScore >= 100) {
+       alert("Player two has won the game!!!!")
+     }
+   }
 //USER-INTERFACE LOGIC
 $(document).ready(function() {
   $("#rolled1").click(function() {
@@ -37,8 +44,10 @@ $(document).ready(function() {
   });
   $("#hold1").click(function() {
     $("#totalscore1").text(playerOne.holdPlay())
+    playerOne.gameWinner();
   });
   $("#hold2").click(function() {
     $("#totalscore2").text(playerTwo.holdPlay())
-  });  
+    playerTwo.gameWinner();
+  });
 });
