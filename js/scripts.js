@@ -57,4 +57,5 @@ $(document).ready(function() {
   $("#reset").click(function() {
         playerOne.reset();
         playerTwo.reset();
+  });      
 });
