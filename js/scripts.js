@@ -20,7 +20,11 @@ function genRandom() {
 }
   return rollDice;
 }
-
+Player.prototype.holdPlay = function() {
+  this.totalScore += this.turnScore;
+  this.turnScore = 0;
+  return this.totalScore;
+}
 //USER-INTERFACE LOGIC
 $(document).ready(function() {
   $("#rolled1").click(function() {
@@ -31,4 +35,10 @@ $(document).ready(function() {
     $("#rolled2value").text(playerTwo.rolledPlay())
     $("#turnScore2").text(playerTwo.turnScore)
   });
+  $("#hold1").click(function() {
+    $("#totalscore1").text(playerOne.holdPlay())
+  });
+  $("#hold2").click(function() {
+    $("#totalscore2").text(playerTwo.holdPlay())
+  });  
 });
