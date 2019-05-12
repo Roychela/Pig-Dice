@@ -27,3 +27,13 @@ h1 {
 .labelstyle {
   font-family: 'Audiowide', sans-serif;
 }
+.footer {
+  background: black;
+  color: darkgreen;
+  text-align: center;
+  font-family: 'Audiowide', sans-serif;
+  padding: 20px;
+}
+#pigdicefooter {
+  padding: 10px;
+}
