@@ -32,6 +32,10 @@ Player.prototype.gameWinner = function() {
        alert("Player two has won the game!!!!")
      }
    }
+Player.prototype.reset = function() {
+    this.totalScore = 0;
+    this.turnScore = 0;
+      };
 //USER-INTERFACE LOGIC
 $(document).ready(function() {
   $("#rolled1").click(function() {
@@ -50,4 +54,7 @@ $(document).ready(function() {
     $("#totalscore2").text(playerTwo.holdPlay())
     playerTwo.gameWinner();
   });
+  $("#reset").click(function() {
+        playerOne.reset();
+        playerTwo.reset();
 });
