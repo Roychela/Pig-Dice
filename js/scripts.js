@@ -1,4 +1,4 @@
-//BUSINESS LOGIC
+8//BUSINESS LOGIC
 function Player() {
   this.totalScore = 0;
   this.turnScore = 0;
@@ -49,13 +49,12 @@ $(document).ready(function() {
   $("#hold1").click(function() {
     $("#totalscore1").text(playerOne.holdPlay())
     playerOne.gameWinner();
+    alert("Next players turn")
   });
   $("#hold2").click(function() {
     $("#totalscore2").text(playerTwo.holdPlay())
     playerTwo.gameWinner();
+    alert("Next Players turn")
   });
-  $("#reset").click(function() {
-        playerOne.reset();
-        playerTwo.reset();
-  });      
+  
 });
